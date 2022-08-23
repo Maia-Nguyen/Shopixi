@@ -1,13 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Dosis:wght@700&family=Elsie+Swash+Caps:wght@900&family=Monoton&family=Rajdhani:wght@500&family=Tillana:wght@600&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: bold;
+  background-color: #f5ebe0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.pages {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background-color: #f5ebe0;
+}
+
+.buttons {
+  display: none;
+}
+
+.logo {
+  color: #28262c;
+  font-family: 'Elsie Swash Caps', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 45px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.links a {
+  text-decoration: none;
+  color: rgb(88, 88, 88);
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 6px 15px;
+  position: relative;
+}
+
+.links a::after {
+  position: absolute;
+  content: '';
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(88, 88, 88);
+  transition: all .8s ease;
+}
+
+.links a:hover {
+  color: #fff;
+  z-index: 1;
+  transition: all .8s ease;
+}
+
+.links a:hover::after {
+  height: 80%;
+  z-index: -1;
+}
+
+@media only screen and (max-width:700px) {
+  .links{
+    display: none;
+  }
 }
