@@ -12,12 +12,12 @@ const Navbar = () => {
         <>
             <div className='navbar'>
                 <div className={ show ? 'logo active' : 'logo' }>
-                    SHOPixi
+                <Link onClick= { ()=> showSwitch() } to='/'>SHOPixi</Link>
                 </div>
                 <div className={ show ? 'links active' : 'links' }>
                     <Link onClick= { ()=> showSwitch() } to='/'>HOME</Link>
                     <Link onClick= { ()=> showSwitch() } to='/about'>ABOUT</Link>
-                    <Link onClick= { ()=> showSwitch() } to='/sign-in'>SIGN IN</Link>
+                    <Link onClick= { ()=> showSwitch() } to='/login'>LOGIN</Link>
                 </div>
                 <div onClick={ ()=> showSwitch() } className=
                     { show ? 'buttons active' : 'buttons' }>
